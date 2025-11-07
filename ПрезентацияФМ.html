@@ -56,7 +56,6 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #3498db, #2c3e50);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -64,11 +63,6 @@
             border: 4px solid white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-        }
-        
-        .photo-placeholder i {
-            font-size: 50px;
-            color: white;
         }
         
         .photo-placeholder img {
@@ -215,38 +209,12 @@
             display: block;
         }
         
-        .progress-container {
-            margin: 20px 0;
-        }
-        
-        .progress-bar {
-            height: 10px;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-top: 5px;
-        }
-        
-        .progress {
-            height: 100%;
-            background-color: var(--success);
-            border-radius: 5px;
-        }
-        
         footer {
             text-align: center;
             margin-top: 40px;
             padding: 20px;
             color: var(--dark);
             font-size: 0.9rem;
-        }
-        
-        .photo-instructions {
-            background: #fff8e1;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-            border-left: 4px solid #ffc107;
         }
         
         @media (max-width: 768px) {
@@ -275,9 +243,7 @@
         <header>
             <div class="profile-container">
                 <div class="photo-placeholder">
-                    <!-- Замените этот div на вашу фотографию -->
-                    <!-- <img src="ваша-фотография.jpg" alt="Усольцев Александр"> -->
-                    <i class="fas fa-user"></i>
+                    <img src="U.jpeg" alt="Усольцев Александр">
                 </div>
                 <div>
                     <h1>Усольцев Александр Валерьевич</h1>
@@ -299,11 +265,6 @@
                 </div>
             </div>
         </header>
-        
-        <div class="photo-instructions">
-            
-            <code>&lt;img src="U.jpeg" alt="Усольцев Александр" class="photo-placeholder"&gt;</code>
-        </div>
         
         <div class="nav-tabs">
             <div class="tab active" data-tab="about">Обо мне</div>
