@@ -217,6 +217,13 @@
             align-items: center;
         }
 
+        .logo-img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+            filter: drop-shadow(0 0 5px var(--neon-pink));
+        }
+
         .logo span {
             color: var(--neon-pink);
             text-shadow: 0 0 10px var(--neon-pink);
@@ -763,6 +770,10 @@
                 flex-direction: column;
                 text-align: center;
             }
+            
+            .logo-img {
+                height: 30px;
+            }
         }
 
         /* Улучшение доступности для пользователей с ограниченной моторикой */
@@ -803,6 +814,8 @@
         <div class="container">
             <nav class="navbar" aria-label="Основная навигация">
                 <a href="#" class="logo" aria-label="Panya House - главная страница">
+                    <!-- Добавлен логотип -->
+                    <img src="logo.png" alt="Panya House" class="logo-img" onerror="this.style.display='none'">
                     <i class="fas fa-spa" aria-hidden="true"></i>Panya<span>House</span>
                 </a>
                 <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Открыть меню">
