@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="Logo.svg" type="image/svg">
+    <link rel="shortcut icon" href="logo.png" type="image/png">
 
     <style>
         /* Базовые стили с улучшенной производительностью */
@@ -322,23 +322,27 @@
             z-index: 1;
         }
 
-        .hero h1 {
-            font-size: clamp(2.8rem, 8vw, 5rem);
-            margin-bottom: clamp(15px, 3vw, 20px);
-            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue), var(--neon-purple));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: glow 2s ease-in-out infinite alternate;
+        .hero-logo {
+            max-width: min(500px, 80%);
+            height: auto;
+            margin: 0 auto clamp(30px, 5vw, 40px);
+            filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.7)) 
+                   drop-shadow(0 0 15px rgba(0, 243, 255, 0.5))
+                   drop-shadow(0 0 25px rgba(0, 243, 255, 0.3));
+            animation: neonGlow 3s ease-in-out infinite alternate;
         }
 
-        @keyframes glow {
+        @keyframes neonGlow {
             from {
-                text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+                filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.6)) 
+                       drop-shadow(0 0 12px rgba(0, 243, 255, 0.4))
+                       drop-shadow(0 0 20px rgba(0, 243, 255, 0.2));
             }
-
             to {
-                text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-blue);
+                filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.7)) 
+                       drop-shadow(0 0 18px rgba(0, 243, 255, 0.5))
+                       drop-shadow(0 0 28px rgba(0, 243, 255, 0.3))
+                       drop-shadow(0 0 35px rgba(185, 103, 255, 0.2));
             }
         }
 
@@ -727,6 +731,10 @@
                 font-size: 1.5rem !important;
             }
             
+            .hero-logo {
+                max-width: 85%;
+            }
+            
             /* Улучшение читаемости на маленьких экранах */
             body {
                 font-size: 16px;
@@ -772,6 +780,11 @@
             html {
                 scroll-behavior: auto;
             }
+            
+            .hero-logo {
+                animation: none;
+                filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.6));
+            }
         }
 
         /* Улучшение контрастности для пользователей с проблемами зрения */
@@ -786,6 +799,10 @@
             .service-card, .benefit-item, .contact-item {
                 background: rgba(240, 240, 240, 0.9);
                 color: #000000;
+            }
+            
+            .hero-logo {
+                filter: none;
             }
         }
     </style>
@@ -833,7 +850,8 @@
         </div>
 
         <div class="hero-content">
-            <h1 id="hero-heading">Panya House</h1>
+            <!-- Большой неоновый логотип -->
+            <img src="Panya roze neon.svg" alt="Panya House" class="hero-logo" onerror="this.style.display='none'">
             <p>Бьюти-студия в Томске, где рождается ваша новая красота</p>
             <a href="#contact" class="btn btn-filled">Записаться онлайн</a>
         </div>
