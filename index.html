@@ -18,20 +18,16 @@
         content="Премиальная бьюти-студия в Томске. Наращивание волос, маникюр, брови и ресницы от опытных мастеров.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://Panyahouse-tomsk.ru">
-
+    
     <!-- Предзагрузка критически важных ресурсов -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
     <!-- Предзагрузка шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="Logo.svg" type="image/svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo.png" type="image/png">
 
     <style>
         /* Базовые стили с улучшенной производительностью */
@@ -221,23 +217,10 @@
             align-items: center;
         }
 
-        .logo-img {
-            height: 40px;
-            width: auto;
-            margin-right: 10px;
-            filter: drop-shadow(0 0 5px var(--neon-pink));
-        }
-
         .logo span {
             color: var(--neon-pink);
             text-shadow: 0 0 10px var(--neon-pink);
             margin-left: 5px;
-        }
-
-        .logo i {
-            margin-right: 10px;
-            color: var(--neon-blue);
-            text-shadow: 0 0 10px var(--neon-blue);
         }
 
         .nav-links {
@@ -743,7 +726,7 @@
             .star {
                 font-size: 1.5rem !important;
             }
-
+            
             /* Улучшение читаемости на маленьких экранах */
             body {
                 font-size: 16px;
@@ -757,33 +740,27 @@
             .container {
                 padding: 0 15px;
             }
-
+            
             section {
                 padding: 50px 0;
             }
-
+            
             .hero-content {
                 padding: 0 10px;
             }
-
-            .service-card,
-            .benefit-item {
+            
+            .service-card, .benefit-item {
                 padding: 25px 20px;
             }
-
+            
             .contact-item {
                 flex-direction: column;
                 text-align: center;
-            }
-
-            .logo-img {
-                height: 30px;
             }
         }
 
         /* Улучшение доступности для пользователей с ограниченной моторикой */
         @media (prefers-reduced-motion: reduce) {
-
             *,
             *::before,
             *::after {
@@ -791,7 +768,7 @@
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
-
+            
             html {
                 scroll-behavior: auto;
             }
@@ -805,10 +782,8 @@
                 --darker-bg: #f0f0f0;
                 --text-glow: #333333;
             }
-
-            .service-card,
-            .benefit-item,
-            .contact-item {
+            
+            .service-card, .benefit-item, .contact-item {
                 background: rgba(240, 240, 240, 0.9);
                 color: #000000;
             }
@@ -822,7 +797,7 @@
         <div class="container">
             <nav class="navbar" aria-label="Основная навигация">
                 <a href="#" class="logo" aria-label="Panya House - главная страница">
-                    <i class="fas fa-spa" aria-hidden="true"></i>Panya<span>House</span>
+                    Panya<span>House</span>
                 </a>
                 <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Открыть меню">
                     ☰
@@ -977,12 +952,9 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://www.instagram.com/panya_brows?igsh=MTJ4a28xejYzdzRhZg==" aria-label="Instagram"><i
-                        class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://vk.com/club226266635" aria-label="ВКонтакте"><i class="fab fa-vk"
-                        aria-hidden="true"></i></a>
-                <a href="https://t.me/panya_brows" aria-label="Telegram"><i class="fab fa-telegram"
-                        aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/panya_brows?igsh=MTJ4a28xejYzdzRhZg==" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://vk.com/club226266635" aria-label="ВКонтакте"><i class="fab fa-vk" aria-hidden="true"></i></a>
+                <a href="https://t.me/panya_brows" aria-label="Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a>
             </div>
             <p>© 2023 Panya House. Бьюти-студия в Томске.</p>
         </div>
@@ -990,20 +962,20 @@
 
     <script>
         // Улучшенный скрипт с обработкой ошибок и оптимизацией
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             // Мобильное меню
             const menuToggle = document.querySelector('.menu-toggle');
             const navLinks = document.querySelector('.nav-links');
-
+            
             if (menuToggle && navLinks) {
                 menuToggle.addEventListener('click', function () {
                     const isExpanded = this.getAttribute('aria-expanded') === 'true';
                     this.setAttribute('aria-expanded', !isExpanded);
                     navLinks.classList.toggle('active');
                 });
-
+                
                 // Закрытие меню при клике вне его области
-                document.addEventListener('click', function (e) {
+                document.addEventListener('click', function(e) {
                     if (!e.target.closest('.navbar') && navLinks.classList.contains('active')) {
                         menuToggle.setAttribute('aria-expanded', 'false');
                         navLinks.classList.remove('active');
@@ -1023,7 +995,7 @@
                     if (targetElement) {
                         // Получаем высоту хедера для корректного позиционирования
                         const headerHeight = document.querySelector('header').offsetHeight;
-
+                        
                         window.scrollTo({
                             top: targetElement.offsetTop - headerHeight,
                             behavior: 'smooth'
@@ -1046,7 +1018,7 @@
 
             // Анимация появления элементов при скролле с отложенной загрузкой
             const fadeElements = document.querySelectorAll('.fade-in');
-
+            
             if (fadeElements.length > 0 && 'IntersectionObserver' in window) {
                 const fadeObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
@@ -1056,7 +1028,7 @@
                             fadeObserver.unobserve(entry.target);
                         }
                     });
-                }, {
+                }, { 
                     threshold: 0.1,
                     rootMargin: '0px 0px -50px 0px' // Запуск анимации немного раньше
                 });
@@ -1073,11 +1045,11 @@
 
             // Случайное мерцание неоновых элементов с оптимизацией
             function randomGlow() {
-                const neonElements = document.querySelectorAll('.service-icon, .benefit-icon, .contact-icon, .logo i, .logo span');
+                const neonElements = document.querySelectorAll('.service-icon, .benefit-icon, .contact-icon, .logo span');
                 if (neonElements.length === 0) return;
-
+                
                 const randomElement = neonElements[Math.floor(Math.random() * neonElements.length)];
-
+                
                 // Временно отключаем анимацию и включаем снова
                 randomElement.style.animation = 'none';
                 setTimeout(() => {
@@ -1095,19 +1067,19 @@
 
             // Оптимизация производительности при скролле
             let ticking = false;
-            window.addEventListener('scroll', function () {
+            window.addEventListener('scroll', function() {
                 if (!ticking) {
-                    requestAnimationFrame(function () {
+                    requestAnimationFrame(function() {
                         // Код, который должен выполняться при скролле
                         ticking = false;
                     });
                     ticking = true;
                 }
             });
-
+            
             // Предотвращение всплывающей клавиатуры на iOS при фокусе
             if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-                document.addEventListener('touchstart', function () {
+                document.addEventListener('touchstart', function() {
                     // Пустая функция для предотвращения стандартного поведения
                 }, { passive: true });
             }
