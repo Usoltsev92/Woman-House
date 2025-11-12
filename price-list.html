@@ -159,6 +159,40 @@
             box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink);
         }
 
+        /* Кнопка "Наверх" */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--neon-pink);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 0 15px rgba(255, 45, 149, 0.5);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background: #e6007a;
+            box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink);
+            transform: translateY(-3px);
+        }
+
         /* Хедер с улучшенной производительностью */
         header {
             background-color: rgba(10, 10, 20, 0.9);
@@ -540,6 +574,34 @@
             .service-price {
                 margin-top: 5px;
             }
+
+            /* Контактная информация для мобильных */
+            .contact-info {
+                flex-direction: column;
+                width: 100%;
+                gap: 15px;
+            }
+            
+            .contact-item {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+            /* Номер телефона белый на мобильных */
+            .contact-item p {
+                color: white !important;
+            }
+            
+            /* Кнопка "Наверх" для мобильных */
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -558,6 +620,25 @@
             .contact-item {
                 flex-direction: column;
                 text-align: center;
+            }
+        }
+
+        /* Улучшение доступности для пользователей с ограниченной моторикой */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+            
+            .scroll-to-top {
+                transition: none;
             }
         }
     </style>
@@ -580,6 +661,11 @@
             </nav>
         </div>
     </header>
+
+    <!-- Кнопка "Наверх" -->
+    <button class="scroll-to-top" aria-label="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- Герой секция прайс-листа -->
     <section class="price-hero">
@@ -923,6 +1009,28 @@
         // Мобильное меню
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Кнопка "Наверх"
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        
+        function toggleScrollToTop() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        }
+        
+        // Показать/скрыть кнопку при скролле
+        window.addEventListener('scroll', toggleScrollToTop);
+        
+        // Плавный скролл наверх при клике
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
         // Плавная прокрутка
